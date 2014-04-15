@@ -1,0 +1,39 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MobileLift.Screens.MobileSpecificScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,10" Grid.RowSpan="2">
+            <TextBlock x:Name="pageTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="contentTitle" Text="page name" Margin="9,5,10,0" Style="{StaticResource PhoneTextLargeStyle}"/>
+            <TextBlock x:Name="contentDescription" TextWrapping="Wrap" Text="TextBasdf asasdf asdf asdf lock" VerticalAlignment="Top" Margin="12,24,12,0" />
+            <CheckBox x:Name="showContentAgain" Content="{Binding Path=LocalizedResources.ContentScreenShowAgain, Source={StaticResource LocalizedStrings}}" Margin="0,30,0,0" Checked="showContentAgain_Checked" IsChecked="true" Unchecked="showContentAgain_Unchecked"/>
+            <Button x:Name="goToDetail" Content="go to Competition" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" Click="goToDetail_Click"/>
+            <TextBlock x:Name="closeButton" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.ContentScreenClose, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="12,20,12,0" Tap="closeButton_Tap"/>
+        </StackPanel>
+        
+
+
+        <!--ContentPanel - place additional content here-->
+        
+    </Grid>
+
+</phone:PhoneApplicationPage>
